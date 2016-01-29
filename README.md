@@ -12,7 +12,7 @@ Install via bower:
 
 Add script to your index.html (if not using Grunt/wiredep/etc)
 
-```<script src='bower_components/ng-set-focus/ngUaIcons.js'></script>```
+```<script src='bower_components/ng-ua-icons/ngUaIcons.js'></script>```
 
 Add module to your application module dependencies
 
@@ -27,7 +27,7 @@ Add module to your application module dependencies
 ```
 
 ## Dependencies
-
+[UAParser.js](http://faisalman.github.io/ua-parser-js)
 
 ## Support
 
