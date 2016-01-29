@@ -12,7 +12,7 @@ angular.module('ngUaIcons', [])
   .directive('ngUaIcons', ['$window', function($window) {
     return {
       template: '<span style="font-size: 1.5em;"><i title="{{browser}}" class="{{browserIcon}}"></i> <i title="{{os}}" class="{{osIcon}}"></i> <i title="{{device}}" class="{{deviceIcon}}"></i></span>',
-      scope:{
+      scope: {
         ngUaIcons: '@'
       },
       link: function(scope, element, attrs) {
@@ -21,8 +21,8 @@ angular.module('ngUaIcons', [])
         if (attrs.hasOwnProperty('ionic')) {
           ion = true;
         }
-        
-        var ua= attrs.ngUaIcons ? attrs.ngUaIcons : null;
+
+        var ua = attrs.ngUaIcons ? attrs.ngUaIcons : null;
         var uaObj = new $window.UAParser(ua);
         var parsed = uaObj.getResult();
 
@@ -48,6 +48,7 @@ angular.module('ngUaIcons', [])
           default:
             scope.browserIcon = '';
         }
+        scope.browser = parsed.browser.name;
 
         switch (parsed.os.name) {
           case 'Windows':
@@ -96,6 +97,7 @@ angular.module('ngUaIcons', [])
           default:
             scope.osIcon = '';
         }
+        scope.os = parsed.os.name;
 
         switch (parsed.device.type) {
           case 'console':
@@ -119,6 +121,7 @@ angular.module('ngUaIcons', [])
           default:
             scope.deviceIcon = ion ? 'ion-android-desktop' : 'fa fa-desktop';
         }
+        scope.device = parsed.device.type;
       }
     };
   }]);
