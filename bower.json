@@ -1,0 +1,30 @@
+{
+  "name": "ng-ua-icons",
+  "version": "0.1.0",
+  "description": "Uses ua-parser.js to convert a ua string into browser, os & device icons",
+  "main": "ngUaIcons.js",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "angular",
+    "directive",
+    "user-agent",
+    "icons"
+  ],
+  "authors": [
+    "Chris Turnbull"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/christurnbull/ng-ua-icons",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ua-parser-js": "~0.7.9"
+  }
+}
