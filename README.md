@@ -28,6 +28,7 @@ Add module to your application module dependencies
 
 ## Dependencies
 [UAParser.js](http://faisalman.github.io/ua-parser-js)
+[Font Awesome](https://fortawesome.github.io/Font-Awesome/) or [Ionicons](http://ionicons.com/)
 
 ## Support
 
